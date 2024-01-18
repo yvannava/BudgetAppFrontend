@@ -16,4 +16,13 @@ import axios from "axios";
               // Handle error cases
             }
           };
-    
+
+          export const GetAllRequest = async (api, setData) => {
+            try {
+              const response = await axios.get(api);
+              setData(response.data);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+              // You might want to handle the error or log it appropriately
+            }
+          };

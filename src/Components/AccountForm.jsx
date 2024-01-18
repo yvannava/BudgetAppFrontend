@@ -6,6 +6,7 @@ const AccountForm = () => {
     const [accountName,setAccountName] = useState("");
     const[balance,setBalance] =useState("");
     const[date,setDate]=useState();
+    const[loadData,setLoadData] =useState(false)
     const api = 'http://localhost:8080/Api/v1/Account';
 
     const resetFields = ()=>{
@@ -22,10 +23,12 @@ const AccountForm = () => {
     };
     PostRequest(api,postData)
     console.log("successfully")
+    setLoadData(!loadData)
     resetFields();
   
   };
 
+  function grabData(){};
   return (
     <>
     <div style={{display:"flex"}}>
@@ -50,7 +53,7 @@ const AccountForm = () => {
             </button>
           </form>
    </div>
-    <AllAccounts/>
+    <AllAccounts loadData ={loadData}/>
    
  </div>
     </>

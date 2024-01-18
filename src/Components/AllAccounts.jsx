@@ -1,5 +1,25 @@
+import { useState,useEffect } from "react"
+import { GetAllRequest } from "../ApiRequest";
 
-const AllAccounts = ()=>{
+const AllAccounts = ({loadData})=>{
+const[requestData,setRequestData] =useState([]);
+const newAccountRow = () => {
+    return requestData.map((accountData) => (
+      <tr key={accountData.id}>
+        <td>{accountData.accountName}</td>
+        <td>{accountData.balance}</td>
+        <td>{accountData.date}</td>
+      </tr>
+    ));
+  };
+
+    useEffect((props) => {
+        // Define the URL for your GET request
+        const api = 'http://localhost:8080/Api/v1/Accounts';
+        GetAllRequest(api,setRequestData)
+        console.log(JSON.stringify(requestData))
+      }, [loadData]);
+
 
     return(
         <>
@@ -13,19 +33,10 @@ const AllAccounts = ()=>{
     </tr>
   </thead>
   <tbody>
-    <tr>
-        <td>Costco</td>
-        <td>$8000</td>
-        <td>02/25/1992</td>
-    </tr>
-    <tr>
-        <td>Best Buy</td>
-        <td>$2400</td>
-        <td>02/25/2001</td>
-    </tr>
-   
-  </tbody>
+   {newAccountRow()}
+  </tbody><i style={{color:"green"}}><b>* Refresh Screen to get new updated table for now!</b></i>
 </table>
+
 </div>
         </>
     )
