@@ -1,0 +1,127 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50dvw;
+  min-height: 30vh;
+  font-size: 18px;
+
+}
+.input-field{
+  width: 30dvw;
+  height: 3dvh;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+   text-align: center;
+   opacity: 80%;
+}
+.input-field:hover{
+  box-shadow: 1px 1px 9px 3px rgba(46, 47, 47, 0.424);
+}
+.input-field:focus{
+  opacity: 100%;
+}
+.btn{
+  width: auto;
+  padding: 0 40px;
+  height: 30px;
+  border-radius: 5px;
+  background: rgb(13, 60, 216);
+  color: white;
+border: none;
+outline: 0.5px solid black;
+  box-shadow: 1px 1px 9px 3px rgba(46, 47, 47, 0.424);
+  margin: 5px;
+  opacity: 90%;
+  font-weight: bold;
+}
+.btn:hover{
+  opacity: 100%;
+  outline: 1px solid black;
+  background-color: white;
+  color: rgb(90, 7, 58);
+  font-weight: bolder;
+
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5vh;
+  align-items: center;
+  width: 60dvw;
+  height: 100dvh;
+  outline:none;
+  border: none;
+  background-color: #4651c5;
+  color:white;
+  box-shadow: 0 4px 7px 8px #4651c56f;
+}
+.form-container h1{
+  margin-top: 10dvh;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Styling for table */
+.all-accounts-container{
+  display: flex;
+  justify-content: center;
+  width: 100dvw;
+  height: 100vh;
+}
+.table{
+  display: flex;
+  flex-direction: column;
+  width: 35dvw;
+  height:fit-content;
+  text-align: justify;
+  border-collapse:collapse;
+  margin-top: 10dvh;
+  box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.402);
+  border-radius: 5px;
+  overflow: hidden;
+}
+tbody{
+    border-radius: 0 0 5px 5px;
+}
+
+.table th{
+  height: 30px;
+  background-color: #00a6a4;
+  width: calc(35dvw/3);
+outline: none;
+color: white;
+padding-inline-start: 10px;
+}
+.table tr,td,th{
+  border: none;
+}
+.table tr{
+  height: 50px;
+  width: 35dvw;
+outline:none;
+border-bottom: 1px dotted black;
+}
+.table tr:hover{
+  background-color: #42dab3;
+  
+}
+.table td{
+  height: 30px;
+  width: calc(35dvw/3);
+  outline: none;
+  padding-inline-start: 10px;
+}
