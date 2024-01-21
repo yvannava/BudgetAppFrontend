@@ -27,13 +27,11 @@ const AccountForm = () => {
     resetFields();
   
   };
-
-  function grabData(){};
+  
   return (
-    <>
     <div style={{display:"flex"}}>
     <div className="form-container">
-        <h1>Use this form to add a new Account.</h1>
+        <h4>Use this form to add a new Account.</h4>
         <hr></hr>
           <form className="form" onSubmit={handleSubmit}>
             <div className="col">
@@ -53,10 +51,8 @@ const AccountForm = () => {
             </button>
           </form>
    </div>
-    <AllAccounts loadData ={loadData}/>
-   
+    {/* <AllAccounts loadData ={loadData}/> */}
  </div>
-    </>
   );
 };
 

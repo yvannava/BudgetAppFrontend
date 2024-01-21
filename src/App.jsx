@@ -1,11 +1,12 @@
 import './App.css'
-import AccountForm from './Components/AccountForm'
+
+import Dashboard from './Pages/Dashboard'
 
 function App() {
 
   return (
     <>
-  <AccountForm/>
+    <Dashboard/>
     </>
   )
 }
